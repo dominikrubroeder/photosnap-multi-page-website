@@ -18,10 +18,13 @@ const StoryPreviewCard: React.FC<StoryPreviewCardProps> = ({
 }) => {
   return (
     <div className="group relative cursor-pointer">
-      <div className="relative min-h-[31.25rem] overflow-hidden">
+      <div className="relative min-h-[65vh] overflow-hidden  md:min-h-[31.25rem]">
         <Image
           src={image}
           fill
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              25vw"
           alt={`${title} story preview image`}
           className="object-cover transition-all duration-300 group-hover:scale-105"
         />
