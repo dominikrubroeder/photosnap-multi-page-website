@@ -4,6 +4,7 @@ import Arrow from '../components/svg/Arrow';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import StoryPreviewCard from '../components/StoryPreviewCard';
+import BrandBenefitsSection from '../components/BrandBenefitsSection';
 
 export default function Home() {
   return (
@@ -130,6 +131,8 @@ export default function Home() {
             title="Architecturals"
           />
         </section>
+
+        <BrandBenefitsSection />
       </main>
     </div>
   );
