@@ -3,6 +3,7 @@ import Header from '../components/layout/Header';
 import Arrow from '../components/svg/Arrow';
 import Image from 'next/image';
 import Button from '../components/ui/Button';
+import StoryPreviewCard from '../components/StoryPreviewCard';
 
 export default function Home() {
   return (
@@ -95,101 +96,29 @@ export default function Home() {
         </section>
 
         <section className="grid md:grid-cols-2 lg:grid-cols-4">
-          <div className="group relative cursor-pointer">
-            <div className="relative min-h-[31.25rem] overflow-hidden">
-              <Image
-                src="/stories/desktop/mountains.jpg"
-                fill
-                alt="The montains story preview image"
-                className="object-cover transition-all duration-300 group-hover:scale-105"
-              />
-            </div>
+          <StoryPreviewCard
+            image="/stories/desktop/mountains.jpg"
+            author="John Appleseed"
+            title="The Mountains"
+          />
 
-            <div className="absolute bottom-0 z-20 grid w-full gap-4 p-10 text-white">
-              <div>
-                <h3 className="text-lg font-bold">The Mountains</h3>
-                <small>by John Appleseed</small>
-              </div>
+          <StoryPreviewCard
+            image="/stories/desktop/cityscapes.jpg"
+            author="Benjamin Cruz"
+            title="Sunset Cityscapes"
+          />
 
-              <hr className="w-full opacity-25 transition-all duration-300 group-hover:w-0" />
+          <StoryPreviewCard
+            image="/stories/desktop/18-days-voyage.jpg"
+            author="Alexei Borodin"
+            title="18 Days Voyage"
+          />
 
-              <Button variant="text" text="Read story" />
-            </div>
-
-            <div className="absolute bottom-0 z-10 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          </div>
-
-          <div className="group relative cursor-pointer">
-            <div className="relative min-h-[31.25rem] overflow-hidden">
-              <Image
-                src="/stories/desktop/cityscapes.jpg"
-                fill
-                alt="Sunset Cityscapes story preview image"
-                className="object-cover transition-all duration-300 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="absolute bottom-0 z-20 grid w-full gap-4 p-10 text-white">
-              <div>
-                <h3 className="text-lg font-bold">Sunset Cityscapes</h3>
-                <small>by Benjamin Cruz</small>
-              </div>
-
-              <hr className="w-full opacity-25 transition-all duration-300 group-hover:w-0" />
-
-              <Button variant="text" text="Read story" />
-            </div>
-
-            <div className="absolute bottom-0 z-10 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          </div>
-
-          <div className="group relative cursor-pointer">
-            <div className="relative min-h-[31.25rem] overflow-hidden">
-              <Image
-                src="/stories/desktop/18-days-voyage.jpg"
-                fill
-                alt="18 days Voyage story preview image"
-                className="object-cover transition-all duration-300 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="absolute bottom-0 z-20 grid w-full gap-4 p-10 text-white">
-              <div>
-                <h3 className="text-lg font-bold">18 Days Voyage</h3>
-                <small>by Alexei Borodin</small>
-              </div>
-
-              <hr className="w-full opacity-25 transition-all duration-300 group-hover:w-0" />
-
-              <Button variant="text" text="Read story" />
-            </div>
-
-            <div className="absolute bottom-0 z-10 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          </div>
-
-          <div className="group relative cursor-pointer">
-            <div className="relative min-h-[31.25rem] overflow-hidden">
-              <Image
-                src="/stories/desktop/architecturals.jpg"
-                fill
-                alt="The montains story preview image"
-                className="object-cover transition-all duration-300 group-hover:scale-105"
-              />
-            </div>
-
-            <div className="absolute bottom-0 z-20 grid w-full gap-4 p-10 text-white">
-              <div>
-                <h3 className="text-lg font-bold">Architecturals</h3>
-                <small>by Samantha Brooke</small>
-              </div>
-
-              <hr className="w-full opacity-25 transition-all duration-300 group-hover:w-0" />
-
-              <Button variant="text" text="Read story" />
-            </div>
-
-            <div className="absolute bottom-0 z-10 h-full w-full bg-gradient-to-t from-black/70 to-transparent"></div>
-          </div>
+          <StoryPreviewCard
+            image="/stories/desktop/architecturals.jpg"
+            author="Samantha Brooke"
+            title="Architecturals"
+          />
         </section>
       </main>
     </div>
