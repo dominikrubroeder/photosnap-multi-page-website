@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from '../components/layout/Header';
 import Arrow from '../components/svg/Arrow';
 import Image from 'next/image';
+import Button from '../components/ui/Button';
 
 export default function Home() {
   return (
@@ -28,11 +29,7 @@ export default function Home() {
               </p>
             </div>
 
-            <button>
-              <div className="flex items-center gap-2">
-                Get an invite <Arrow />
-              </div>
-            </button>
+            <Button variant="text" text="Get an invite" />
           </div>
 
           <div className="relative">

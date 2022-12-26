@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-light-grey': 'hsl(0°, 0%, 87%)',
+        'brand-light-grey': 'hsl(0, 0%, 87%)',
       },
     },
   },

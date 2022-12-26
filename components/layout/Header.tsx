@@ -29,7 +29,7 @@ const Header: React.FC = () => {
 
             <hr className="border-black opacity-25 md:hidden" />
 
-            <Button>Get an invite</Button>
+            <Button variant="contained" text="Get an invite" />
           </div>
         </div>
       </div>
