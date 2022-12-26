@@ -10,9 +10,15 @@ interface ButtonProps {
    */
   variant: 'contained' | 'text';
   onClick?: () => void;
+  link?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ text, variant = 'text', onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  text,
+  variant = 'text',
+  onClick,
+  link,
+}) => {
   const onClickHandler = () => {
     if (onClick) onClick();
   };
