@@ -16,9 +16,15 @@ const Header: React.FC = () => {
 
           <div className="absolute left-0 mt-4 grid w-full justify-center gap-8 md:relative md:left-auto md:mt-0 md:flex md:justify-between">
             <ul className="grid gap-4 text-center md:flex md:flex-1 md:items-center md:justify-center md:gap-2 md:text-left">
-              <li className="uppercase tracking-widest">Stories</li>
-              <li className="uppercase tracking-widest">Features</li>
-              <li className="uppercase tracking-widest">Pricing</li>
+              <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
+                Stories
+              </li>
+              <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
+                Features
+              </li>
+              <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
+                Pricing
+              </li>
             </ul>
 
             <hr className="border-black opacity-25 md:hidden" />
