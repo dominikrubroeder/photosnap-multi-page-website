@@ -7,7 +7,7 @@ import PageHero from '../components/PageHero';
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout footerWithBetaBanner={false}>
       <PageHero
         image="/home/desktop/create-and-share.jpg"
         title="Create and share your photo stories."
