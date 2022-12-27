@@ -3,41 +3,17 @@ import Button from '../components/ui/Button';
 import StoryPreviewCard from '../components/StoryPreviewCard';
 import BrandBenefitsSection from '../components/BrandBenefitsSection';
 import Layout from '../components/layout';
+import PageHero from '../components/PageHero';
 
 export default function Home() {
   return (
     <Layout>
-      <section className="grid min-h-[40.625rem] md:grid-cols-[3fr_1fr] lg:grid-cols-[2fr_3fr]">
-        <div className="relative min-h-[17.8125rem] md:order-2">
-          <Image
-            src="/home/desktop/create-and-share.jpg"
-            fill
-            alt="Create and share"
-            className="object-cover"
-          />
-        </div>
-
-        <div className="relative flex flex-col items-center justify-center gap-8 bg-black py-20 text-white md:order-1 md:py-0">
-          <div className="flex w-full gap-4">
-            <div className="w-1 bg-brand"></div>
-
-            <div className="relative left-1/2 -ml-4 grid max-w-xs flex-1 -translate-x-1/2 gap-12">
-              <div className="grid gap-2">
-                <h1 className="text-[2.5rem] font-bold uppercase">
-                  Create and share your photo stories.
-                </h1>
-                <p className="opacity-[60%]">
-                  Photosnap is a platform for photographers and visual
-                  storytellers. We make it easy to share photos, tell stories
-                  and connect with others.
-                </p>
-              </div>
-
-              <Button variant="text" text="Get an invite" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/home/desktop/create-and-share.jpg"
+        title="Create and share your photo stories."
+        description="Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others."
+        link="/stories"
+      />
 
       <section className="grid min-h-[40.625rem] md:grid-cols-[2fr_3fr] lg:grid-cols-[3fr_2fr]">
         <div className="relative min-h-[17.8125rem]">
