@@ -7,6 +7,12 @@ import PageHero from '../components/PageHero';
 import { NextPage } from 'next';
 
 const Home: NextPage = () => {
+  /**
+   * Line animation when scrolling (scrolling line through page)
+   * Glowing, moving background image (lava effect)
+   * Selected pricing model animation on switch
+   */
+
   return (
     <Layout footerWithBetaBanner={false}>
       <PageHero
