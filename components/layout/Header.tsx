@@ -21,7 +21,7 @@ const Header: React.FC = () => {
                 <Link href="/stories">Stories</Link>
               </li>
               <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
-                Features
+                <Link href="/features">Features</Link>
               </li>
               <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
                 Pricing

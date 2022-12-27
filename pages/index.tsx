@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import StoryPreviewCard from '../components/StoryPreviewCard';
-import BrandBenefitsSection from '../components/BrandBenefitsSection';
+import Features from '../components/Features';
 import Layout from '../components/layout';
 import PageHero from '../components/PageHero';
 
@@ -97,7 +97,7 @@ export default function Home() {
         />
       </section>
 
-      <BrandBenefitsSection />
+      <Features show={3} />
     </Layout>
   );
 }
