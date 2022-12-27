@@ -4,8 +4,9 @@ import StoryPreviewCard from '../components/StoryPreviewCard';
 import Features from '../components/Features';
 import Layout from '../components/layout';
 import PageHero from '../components/PageHero';
+import { NextPage } from 'next';
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <Layout footerWithBetaBanner={false}>
       <PageHero
@@ -100,4 +101,6 @@ export default function Home() {
       <Features show={3} />
     </Layout>
   );
-}
+};
+
+export default Home;

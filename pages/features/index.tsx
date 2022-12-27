@@ -2,8 +2,9 @@ import React from 'react';
 import Layout from '../../components/layout';
 import PageHero from '../../components/PageHero';
 import Features from '../../components/Features';
+import { NextPage } from 'next';
 
-const FeaturesPage: React.FC = () => {
+const FeaturesPage: NextPage = () => {
   return (
     <Layout>
       <PageHero

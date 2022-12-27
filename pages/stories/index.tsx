@@ -3,8 +3,9 @@ import Layout from '../../components/layout';
 import { stories } from '../../data/stories';
 import StoryPreviewCard from '../../components/StoryPreviewCard';
 import StoryHero from '../../components/StoryHero';
+import { NextPage } from 'next';
 
-const StoriesPage: React.FC = () => {
+const StoriesPage: NextPage = () => {
   const [activeStory, setActiveStory] = useState(0);
 
   return (
