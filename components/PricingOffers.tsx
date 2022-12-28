@@ -3,7 +3,8 @@ import { pricingModels } from '../data/pricing';
 import { motion, useAnimationControls } from 'framer-motion';
 
 const PricingOffers: React.FC = () => {
-  const controls = useAnimationControls();
+  const selectedPricingControls = useAnimationControls();
+  const backgroundControls = useAnimationControls();
   const [paymentInterval, setPaymentInterval] = useState<'monthly' | 'yearly'>(
     'monthly'
   );
@@ -12,34 +13,74 @@ const PricingOffers: React.FC = () => {
   >('Pro');
 
   useEffect(() => {
-    if (selectedPricingLevel === 'Basic')
-      controls.start({
-        translateX: '0%',
-        opacity: 1,
-        visibility: 'visible',
-        scale: 0.9,
-        transition: { ease: 'easeOut', duration: 0.6 },
-        width: '33%',
-      });
-    if (selectedPricingLevel === 'Pro')
-      controls.start({
-        translateX: '100%',
-        opacity: 1,
-        visibility: 'visible',
-        scale: 0.9,
-        transition: { ease: 'easeOut', duration: 0.6 },
-        width: '33%',
-      });
-    if (selectedPricingLevel === 'Business')
-      controls.start({
-        translateX: '200%',
-        opacity: 1,
-        visibility: 'visible',
-        scale: 0.9,
-        transition: { ease: 'easeOut', duration: 0.6 },
-        width: '33%',
-      });
-  }, [controls, selectedPricingLevel]);
+    if (selectedPricingLevel === 'Basic') {
+      if (window.innerWidth > 768)
+        selectedPricingControls.start({
+          translateX: '0%',
+          opacity: 1,
+          visibility: 'visible',
+          scale: 0.9,
+          transition: { ease: 'easeOut', duration: 0.6 },
+          width: '33%',
+        });
+      else
+        selectedPricingControls.start({
+          translateY: '0%',
+          opacity: 1,
+          visibility: 'visible',
+          scale: 0.9,
+          transition: { ease: 'easeOut', duration: 0.6 },
+          width: '33%',
+        });
+    }
+
+    if (selectedPricingLevel === 'Pro') {
+      if (window.innerWidth > 768)
+        selectedPricingControls.start({
+          translateX: '100%',
+          opacity: 1,
+          visibility: 'visible',
+          scale: 0.9,
+          transition: { ease: 'easeOut', duration: 0.6 },
+          width: '33%',
+        });
+      else
+        selectedPricingControls.start({
+          translateY: '100%',
+          opacity: 1,
+          visibility: 'visible',
+          scale: 0.9,
+          transition: { ease: 'easeOut', duration: 0.6 },
+          width: '33%',
+        });
+    }
+
+    if (selectedPricingLevel === 'Business') {
+      if (window.innerWidth > 768)
+        selectedPricingControls.start({
+          translateX: '200%',
+          opacity: 1,
+          visibility: 'visible',
+          scale: 0.9,
+          transition: { ease: 'easeOut', duration: 0.6 },
+          width: '33%',
+        });
+      else
+        selectedPricingControls.start({
+          translateY: '200%',
+          opacity: 1,
+          visibility: 'visible',
+          scale: 0.9,
+          transition: { ease: 'easeOut', duration: 0.6 },
+          width: '33%',
+        });
+    }
+
+    backgroundControls.start({
+      width: ['0%', '100%'],
+      transition: { ease: 'easeOut', duration: 0.6, delay: 0.2 },
+    });
+  }, [selectedPricingControls, backgroundControls, selectedPricingLevel]);
 
   return (
     <div className="mx-auto grid w-full max-w-[69.375rem] gap-14">
@@ -80,20 +121,25 @@ const PricingOffers: React.FC = () => {
         </span>
       </div>
 
-      <div className="relative grid gap-8 text-center lg:grid-cols-3 lg:gap-4">
+      <div className="relative grid gap-2 p-4 text-center lg:grid-cols-3 lg:gap-4">
         {pricingModels.map(
           ({ level, description, priceMonthly, priceYearly }, i) => (
             <div
               key={i}
-              className={`relative mx-auto grid max-w-2xl cursor-pointer gap-8 py-14 px-10 transition-all active:scale-75 ${
+              className={`group relative mx-auto grid max-w-2xl cursor-pointer gap-8 py-14 px-10 transition-all active:scale-[0.8] ${
                 selectedPricingLevel === level
                   ? 'z-10 scale-100 bg-black text-white'
-                  : 'scale-90 bg-brand-lightest-grey'
+                  : 'scale-90 bg-brand-lightest-grey hover:scale-95 hover:text-white'
               }`}
               onClick={() => setSelectedPricingLevel(level)}
             >
               {selectedPricingLevel === level && (
-                <div className="absolute top-0 left-0 h-1 w-full bg-brand"></div>
+                <motion.div
+                  initial={{ width: '0%' }}
+                  animate={backgroundControls}
+                  exit={{ width: '0%' }}
+                  className="absolute top-0 left-0 h-1 bg-brand"
+                ></motion.div>
               )}
 
               <div className="grid gap-4">
@@ -116,6 +162,7 @@ const PricingOffers: React.FC = () => {
               </div>
 
               <button
+                onClick={() => setSelectedPricingLevel(level)}
                 className={`py-3 ${
                   selectedPricingLevel === level
                     ? 'bg-white text-black'
@@ -124,15 +171,17 @@ const PricingOffers: React.FC = () => {
               >
                 Pick plan
               </button>
+
+              <motion.div className="absolute left-0 -z-10 h-full w-0 bg-black transition-all duration-300 group-hover:w-full"></motion.div>
             </div>
           )
         )}
 
         <motion.div
           initial={{ translateX: '100%', width: '0%' }}
-          animate={controls}
+          animate={selectedPricingControls}
           exit={{ translateX: '100%' }}
-          className="absolute left-0 -z-10 h-full bg-brand opacity-0 blur-3xl"
+          className="absolute left-0 -z-10 h-1/3 bg-brand opacity-0 blur-3xl lg:h-full"
         ></motion.div>
       </div>
     </div>
