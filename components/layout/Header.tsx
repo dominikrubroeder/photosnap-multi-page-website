@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from '../svg/Logo';
 import Button from '../ui/Button';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Navigation from '../navigation/navigation';
 
 const Header: React.FC = () => {
   return (
@@ -17,17 +17,7 @@ const Header: React.FC = () => {
           </button>
 
           <div className="absolute left-0 z-50 grid w-full justify-center gap-8 bg-white md:relative md:left-auto md:mt-0 md:flex md:justify-between md:py-0">
-            <ul className="grid gap-4 text-center md:flex md:flex-1 md:items-center md:justify-center md:gap-2 md:text-left">
-              <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
-                <Link href="/stories">Stories</Link>
-              </li>
-              <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
-                <Link href="/features">Features</Link>
-              </li>
-              <li className="cursor-pointer uppercase tracking-widest transition duration-300 hover:opacity-25">
-                <Link href="/pricing">Pricing</Link>
-              </li>
-            </ul>
+            <Navigation withHome={false} />
 
             <hr className="border-black opacity-25 md:hidden" />
 
