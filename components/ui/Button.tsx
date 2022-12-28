@@ -1,5 +1,6 @@
 import React from 'react';
 import Arrow from '../svg/Arrow';
+import { useRouter } from 'next/router';
 
 interface ButtonProps {
   /** The `text` property will display the button text. */
@@ -10,17 +11,20 @@ interface ButtonProps {
    */
   variant: 'contained' | 'text';
   onClick?: () => void;
-  link?: string;
+  href?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   text,
   variant = 'text',
   onClick,
-  link,
+  href,
 }) => {
+  const router = useRouter();
+
   const onClickHandler = () => {
     if (onClick) onClick();
+    if (href) router.push(`${href}`);
   };
 
   if (variant === 'text')

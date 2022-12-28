@@ -5,6 +5,7 @@ import Features from '../components/Features';
 import Layout from '../components/layout';
 import PageHero from '../components/PageHero';
 import { NextPage } from 'next';
+import { stories } from '../data/stories';
 
 const Home: NextPage = () => {
   /**
@@ -79,29 +80,15 @@ const Home: NextPage = () => {
       </section>
 
       <section className="grid md:grid-cols-2 lg:grid-cols-4">
-        <StoryPreviewCard
-          image="/stories/desktop/mountains.jpg"
-          author="John Appleseed"
-          title="The Mountains"
-        />
-
-        <StoryPreviewCard
-          image="/stories/desktop/cityscapes.jpg"
-          author="Benjamin Cruz"
-          title="Sunset Cityscapes"
-        />
-
-        <StoryPreviewCard
-          image="/stories/desktop/18-days-voyage.jpg"
-          author="Alexei Borodin"
-          title="18 Days Voyage"
-        />
-
-        <StoryPreviewCard
-          image="/stories/desktop/architecturals.jpg"
-          author="Samantha Brooke"
-          title="Architecturals"
-        />
+        {stories.slice(1, 5).map(({ image, title, author, href }, i) => (
+          <StoryPreviewCard
+            key={i}
+            image={image}
+            author={author}
+            title={title}
+            href={href}
+          />
+        ))}
       </section>
 
       <Features show={3} />

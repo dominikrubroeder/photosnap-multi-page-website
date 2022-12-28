@@ -4,6 +4,7 @@ export type Story = {
   author: string;
   description: string;
   date: string;
+  href: string;
 };
 
 export const stories: Story[] = [
@@ -14,6 +15,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2020-03-02',
+    href: '/stories/hazy-full-moon-of-appalachia',
   },
   {
     image: '/stories/desktop/mountains.jpg',
@@ -22,6 +24,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-04-16',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/cityscapes.jpg',
@@ -30,6 +33,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-04-14',
+    href: '/stories/sunset-cityscapes',
   },
   {
     image: '/stories/desktop/18-days-voyage.jpg',
@@ -38,6 +42,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-04-11',
+    href: '/stories/18-day-voyage',
   },
   {
     image: '/stories/desktop/architecturals.jpg',
@@ -46,6 +51,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-04-09',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/world-tour.jpg',
@@ -54,6 +60,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-04-07',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/unforeseen-corners.jpg',
@@ -62,6 +69,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-04-03',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/king-on-africa.jpg',
@@ -70,6 +78,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-29',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/trip-to-nowhere.jpg',
@@ -78,6 +87,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-21',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/rage-of-the-sea.jpg',
@@ -86,6 +96,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-19',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/running-free.jpg',
@@ -94,6 +105,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-16',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/behind-the-waves.jpg',
@@ -102,6 +114,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-11',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/calm-waters.jpg',
@@ -110,6 +123,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-09',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/milky-way.jpg',
@@ -118,6 +132,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-05',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/dark-forest.jpg',
@@ -126,6 +141,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-04',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/somwarpet.jpg',
@@ -134,6 +150,7 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-03-01',
+    href: '/stories/the-mountains',
   },
   {
     image: '/stories/desktop/land-of-dreams.jpg',
@@ -142,5 +159,6 @@ export const stories: Story[] = [
     description:
       'The dissected plateau area, while not actually made up of geological mountains, is popularly called "mountains," especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged.',
     date: '2022-02-25',
+    href: '/stories/the-mountains',
   },
 ];
