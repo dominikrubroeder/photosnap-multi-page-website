@@ -126,7 +126,7 @@ const PricingOffers: React.FC = () => {
           ({ level, description, priceMonthly, priceYearly }, i) => (
             <div
               key={i}
-              className={`group relative mx-auto grid max-w-2xl cursor-pointer gap-8 py-14 px-10 transition-all active:scale-[0.8] ${
+              className={`group relative mx-auto grid max-w-2xl cursor-pointer gap-8 py-14 px-10 transition-all active:scale-[0.93] ${
                 selectedPricingLevel === level
                   ? 'z-10 scale-100 bg-black text-white'
                   : 'scale-90 bg-brand-lightest-grey hover:scale-95 hover:text-white'
@@ -172,7 +172,7 @@ const PricingOffers: React.FC = () => {
                 Pick plan
               </button>
 
-              <motion.div className="absolute left-0 -z-10 h-full w-0 bg-black transition-all duration-300 group-hover:w-full"></motion.div>
+              <motion.div className="absolute top-0 -z-10 h-0 w-full bg-black transition-all duration-300 group-hover:h-full"></motion.div>
             </div>
           )
         )}
