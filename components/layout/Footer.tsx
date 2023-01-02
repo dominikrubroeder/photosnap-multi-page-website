@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ withBetaBanner = true }) => {
 
           <div className="relative z-20 mx-auto grid w-full max-w-[69.375rem] gap-8 md:flex md:items-center md:justify-between">
             <h3 className="max-w-[25rem] text-[2.5rem] font-bold uppercase leading-[3rem] tracking-[0.25rem]">
-              We’re in beta. Get your invite today!
+              We&prime;re in beta. Get your invite today!
             </h3>
             <Button variant="text" text="Get an invite" />
           </div>
