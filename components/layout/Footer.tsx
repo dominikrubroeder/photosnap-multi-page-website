@@ -32,13 +32,42 @@ const Footer: React.FC<FooterProps> = ({ withBetaBanner = true }) => {
       )}
 
       <footer className="bg-black py-16 px-10 text-white">
-        <div className="mx-auto flex max-w-[69.375rem] items-center justify-between">
-          <div>
+        <div className="mx-auto grid max-w-[69.375rem] justify-center gap-28 md:flex md:justify-between">
+          <div className="grid gap-8 lg:flex lg:justify-start lg:gap-32">
             <Logo />
-            <Navigation />
+            <Navigation isFooter />
           </div>
 
-          <Button variant="text" text="Get an invite" />
+          <div className="flex flex-col items-start justify-between">
+            <div className="mx-auto md:mx-0 md:ml-auto">
+              <Button variant="text" text="Get an invite" />
+            </div>
+
+            <div className="grid justify-start gap-2">
+              <p className="mt-8 text-center text-xs font-normal opacity-50 md:text-right">
+                Frontend challenge by&nbsp;
+                <a
+                  href="https://www.frontendmentor.io/challenges/photosnap-multipage-website-nMDSrNmNW"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  frontendmentor.io
+                </a>
+                , developed by&nbsp;
+                <a
+                  href="https://github.com/dominikrubroeder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Dominik Rubröder
+                </a>
+              </p>
+
+              <p className="text-center font-normal opacity-50 md:text-right">
+                Copyright {new Date().getFullYear()}. All Rights Reserved
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </>
