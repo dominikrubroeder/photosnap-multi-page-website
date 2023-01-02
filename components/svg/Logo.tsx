@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 interface LogoProps {
-  className: string;
+  className?: string;
 }
 
 const Logo: React.FC<LogoProps> = ({ className }) => {

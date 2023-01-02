@@ -12,7 +12,18 @@ const StoryHero: React.FC<Story> = ({
 }) => {
   return (
     <div className="relative">
-      <div className="absolute top-1/2 z-10 grid w-full max-w-sm -translate-y-1/2 gap-8 text-white md:ml-28">
+      <div className="relative h-80 md:min-h-[40.625rem]">
+        <Image
+          src={image}
+          fill
+          alt={`${title} story image`}
+          className="object-cover"
+          sizes="100vw"
+          quality="100"
+        />
+      </div>
+
+      <div className="grid w-full gap-8 bg-black p-10 text-white md:absolute md:top-1/2 md:z-10 md:ml-28 md:max-w-sm md:-translate-y-1/2 md:bg-transparent">
         <div className="grid gap-4">
           <small className="uppercase tracking-widest">
             Last month featured story
@@ -31,17 +42,6 @@ const StoryHero: React.FC<Story> = ({
         </div>
 
         <Button variant="text" text="Read the story" />
-      </div>
-
-      <div className="relative min-h-[40.625rem]">
-        <Image
-          src={image}
-          fill
-          alt={`${title} story image`}
-          className="object-cover"
-          sizes="100vw"
-          quality="100"
-        />
       </div>
     </div>
   );

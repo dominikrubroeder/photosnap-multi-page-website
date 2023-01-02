@@ -14,7 +14,15 @@ const Story: NextPage = () => {
 
   return (
     <Layout footerWithBetaBanner={false}>
-      <StoryHero {...(storyData ?? stories[0])} />
+      <div className="relative">
+        <button
+          onClick={() => router.back()}
+          className="absolute top-4 left-4 z-50"
+        >
+          Back
+        </button>
+        <StoryHero {...(storyData ?? stories[0])} />
+      </div>
     </Layout>
   );
 };
