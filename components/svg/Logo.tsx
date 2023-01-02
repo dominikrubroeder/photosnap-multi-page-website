@@ -1,14 +1,18 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Logo: React.FC = () => {
+interface LogoProps {
+  className: string;
+}
+
+const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <Link href="/">
       <svg
         viewBox="0 0 170 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-4 w-auto"
+        className={`h-4 w-auto ${className ? className : ''}`}
       >
         <g id="Frame" clipPath="url(#clip0_0_4414)">
           <path

@@ -34,7 +34,7 @@ const Footer: React.FC<FooterProps> = ({ withBetaBanner = true }) => {
       <footer className="bg-black py-16 px-10 text-white">
         <div className="mx-auto grid max-w-[69.375rem] justify-center gap-28 md:flex md:justify-between">
           <div className="grid gap-8 lg:flex lg:justify-start lg:gap-32">
-            <Logo />
+            <Logo className="mx-auto md:mx-0" />
             <Navigation isFooter />
           </div>
 

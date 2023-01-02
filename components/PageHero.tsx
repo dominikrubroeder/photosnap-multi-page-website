@@ -28,9 +28,9 @@ const PageHero: React.FC<PageHeroProps> = ({
 
       <div className="relative flex flex-col items-center justify-center gap-8 bg-black py-20 text-white md:order-1 md:py-0">
         <div className="flex w-full gap-4">
-          <div className="w-1 bg-brand"></div>
+          <div className="absolute top-0 left-8 h-1 w-32 bg-brand md:relative md:left-0 md:h-full md:w-1"></div>
 
-          <div className="relative left-1/2 -ml-4 grid max-w-xs flex-1 -translate-x-1/2 gap-12">
+          <div className="relative grid max-w-xs flex-1 gap-12 pl-8 md:left-1/2 md:-ml-4 md:-translate-x-1/2">
             <div className="grid gap-2">
               <h1 className="text-[2.5rem] font-bold uppercase">{title}</h1>
               <p className="opacity-[60%]">{description}</p>
