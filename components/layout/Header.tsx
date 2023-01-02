@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../svg/Logo';
 import Button from '../ui/Button';
 import { motion } from 'framer-motion';
-import Navigation from '../navigation/navigation';
+import Navigation from '../navigation/Navigation';
 import { AnimatePresence } from 'framer-motion';
 
 // Staggering navigation items appearance: https://codesandbox.io/s/framer-motion-side-menu-mx2rw?from-embed=&file=/src/Navigation.tsx
