@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { navigation } from '../../data/navigation';
+import { navigation } from '../data/navigation';
 
 interface NavigationProps {
   withHome?: boolean;
@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({
     >
       {withHome && (
         <li className="cursor-pointer uppercase tracking-[0.125rem] transition duration-300 hover:opacity-25">
-          <Link href="/">Home</Link>
+          <Link href="/">Homee</Link>
         </li>
       )}
 

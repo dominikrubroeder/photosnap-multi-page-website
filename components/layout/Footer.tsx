@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../svg/Logo';
 import Button from '../ui/Button';
 import Image from 'next/image';
-import Navigation from '../navigation/Navigation';
+import Navigation from '../Navigation';
 
 interface FooterProps {
   withBetaBanner?: boolean;
