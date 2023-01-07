@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({
     >
       {withHome && (
         <li className="cursor-pointer uppercase tracking-[0.125rem] transition duration-300 hover:opacity-25">
-          <Link href="/">Homee</Link>
+          <Link href="/">Home</Link>
         </li>
       )}
 
